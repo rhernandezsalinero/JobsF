@@ -1,0 +1,55 @@
+<div class="browse-main">
+  <div class="container">
+    <div class="box-input d-block p-2 w-100 bg-white">
+
+      <form action="" class="row" [formGroup]="form" (ngSubmit)="loadOferts()">
+        <div class="col-4">
+          <label class="form-label" for="busqueda">Búsqueda</label>
+          <input class="form-control" type="text" name="busqueda" placeholder="fullstack developer"
+            formControlName="busqueda">
+        </div>
+        <div class="col-3">
+          <label class="form-label" for="tipo">Tipo de oferta</label>
+          <input class="form-control" type="text" name="tipo" placeholder="Tiempo completo" formControlName="tipo">
+        </div>
+        <div class="col-3">
+          <label class="form-label" for="localizacion">Localización</label>
+          <input class="form-control" type="text" name="localizacion" placeholder="Full Remoto" formControlName="localizacion">
+        </div>
+        <div class="col-2 div-button">
+          <button type="submit" class="btn btn-search "><img src="../../assets/images/ic_search_white.svg"
+              alt="buscar">Buscar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h5 class="titulo mt-5 mb-4">142 Resultados de búsqueda</h5>
+  <app-oferts [offers]="offers"></app-oferts>
+  <div class="d-flex mt-4">
+    <div class="ms-auto">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+.titulo{
+    color: gray;
+    font-weight: 500;
+}
+
+.cartas{
+    background-color: white;
+    border-radius: 0.5rem;
+
+
+    p{
+        color: #1F1348;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .image{
+        // background: url("../../../assets/images/shopify.jpg");
+        background-position: center center;
+        background-size: cover;
+        border-radius: 0.5rem;
+        width: 7rem;
+        height: 5rem;
+    }
+    h5{
+        margin-bottom: 0.25rem;
+        color: #1F1348;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+
+
+    .badge-ft{
+        color: #293BE9;
+        background-color: #293ce936;
+    }
+
+    .badge-free{
+        color: #11C46F;
+        background-color: #11c47142;
+    }
+
+    .badge-intern{
+        color: #F9910A;
+        background-color: #f9910a2f
+    }
+
+    .badge-pt{
+        color: #521BD5;
+        background-color: #531bd548;
+    }
+
+    .badge-project{
+        color: #FF530B;
+        background-color: #ff540b2f;
+    }
+
+    .date, .location, .type{
+
+
+        p{
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+}
+
+
+.offers-btn{
+
+    background: rgb(186, 195, 211);
+    border: none;
+    color: #1F1348;
+    span{
+        font-weight: 900;
+    }
+}
+
+a{
+    text-decoration: none;
+}

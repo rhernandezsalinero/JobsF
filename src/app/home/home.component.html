@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="buscador-items">
+      <h1>Encuentra las mejores <br><br> ofertas de empleo</h1>
+      <div class="box-input">
+        <input #name type="text" placeholder="Busca ofertas de empleo" (keydown.enter)="search(name.value)">
+        <button type="button" class="btn btn-search" (click)="search(name.value)"><img src="assets/images/ic_search.svg"
+            alt="buscar"></button>
+      </div>
+      <span>Busca diseñador web, fullstack, programador androdid...</span>
+    </div>
+  </div>
+</div>
+<div class="container">
+<h5 class="titulo mt-5 mb-4">Trabajos destacados de hoy</h5>
+<app-oferts [offers]="offers"></app-oferts>
+<div class="d-flex mt-4"><button class="offers-btn ms-auto btn btn-primary">Ver todas las ofertas<span class="ms-3">>></span></button></div>
+</div>
+

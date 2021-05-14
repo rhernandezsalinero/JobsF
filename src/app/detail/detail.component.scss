@@ -1,0 +1,66 @@
+
+
+.card{
+    color: #151958;
+
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+
+.image{
+    background: url("../../assets/images/shopify.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 8rem;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+}
+
+.badge-ft{
+    color: #293BE9;
+    background-color: #293ce936;
+    max-width: 180px;
+}
+
+h6{
+    font-size: 0.75rem;
+    color: gray;
+    font-weight: 600;
+}
+
+
+.application{
+    button{
+        color: #8185AE;
+        background: #F6F6FB;
+        font-size: 1.5rem;
+
+    }
+}
+
+.inicial{
+    width: 2rem;
+}
+
+.button-cv, .button-contact{
+    margin-right: 1rem;
+}
+
+
+.image{
+    background: url("../../assets/images/shopify.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0.5rem;
+    width: 7rem;
+    height: 5rem;
+}

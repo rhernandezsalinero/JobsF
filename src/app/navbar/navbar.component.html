@@ -1,0 +1,93 @@
+<div [ngClass]="{'blue': bgBlue}">
+  <nav class="container navbar navbar-expand-lg" >
+  <div class="container-fluid" > <!-- *ngIf="isCompany && isEmpleado" -->
+    <a class="navbar-brand" href="#"><img src="../../assets/images/sublimin.png" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-links collapse navbar-collapse " id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 list-right">
+        <li class="nav-item">
+          <a class="nav-link btn-isesion active" (click)="login()" aria-current="page" >Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-publicar" (click)="newOfert()">Publicar oferta</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid d-block p-2" *ngIf="!isEmpleado">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-links collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 list-left">
+        <li class="nav-item">
+          <a class="navbar-brand" href="#"><img src="../../assets/images/sublimin.png" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-isesion active" aria-current="page" href="#">Buscar ofertas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-isesion" href="#">Mi Panel</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 list-right">
+        <li class="nav-item dropdown">
+          <a class="nav-link btn-isesion active dropdown-toggle" aria-current="page" href="#" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">Rubén H.</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Editar datos</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-icon-session" href="#">R</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid d-block p-2" *ngIf="!isCompany">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-links collapse navbar-collapse " id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 list-left">
+        <li class="nav-item">
+          <a class="navbar-brand" href="#"><img src="../../assets/images/sublimin.png" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-isesion active" aria-current="page" href="#">Buscar ofertas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-isesion" href="#">Mis Publicaciones</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 list-right ">
+        <li class="nav-item dropdown">
+          <a class="nav-link btn-isesion active dropdown-toggle" aria-current="page" href="#" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">Rubén H.</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Editar datos</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link btn-icon-session" href="#">R</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-publicar" href="#">Publicar oferta</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+</div>

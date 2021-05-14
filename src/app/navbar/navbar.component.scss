@@ -1,0 +1,64 @@
+.navbar {
+  .container-fluid {
+    padding-top: 26px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .list-left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      a {
+        color: rgba(255, 255, 255, 0.7) !important;
+      }
+    }
+
+    .list-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .btn-isesion {
+      color: #ffffff !important;
+      margin-right: 16px;
+    }
+
+    .btn-publicar {
+      border-radius: 9px;
+      background: #ffffff;
+      color: #0d1351 !important;
+      padding: 7px 13px 7px 13px;
+    }
+
+    .isnt-home {
+      background-color: #151958 !important;
+    }
+    .btn-icon-session {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background: #1b7aff !important;
+      color: white;
+      margin-right: 20px;
+      margin-left: -10px;
+    }
+
+    .dropdown-item {
+      color: #0d1351 !important;
+    }
+  }
+
+
+
+}
+
+.blue {
+  background: #151958 !important;
+  padding-bottom: 20px;
+}

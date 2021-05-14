@@ -1,0 +1,43 @@
+.box-input {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-left: 20px !important;
+  input {
+    border: none;
+    outline: none;
+    color: #313c6e !important;
+    padding: 0;
+  }
+  label {
+    color: #313c6e !important;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  .div-button {
+    margin-right: -10px;
+    button {
+      background-color: #4052ff;
+      width: 100%;
+      color: white;
+      height: 100%;
+      border-radius: 12px;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.browse-main{
+  background-color: #151958;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 25px;
+  margin-top: -80px;
+}
+
+
+.titulo{
+  color: gray;
+  font-weight: 500;
+}

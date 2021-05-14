@@ -1,0 +1,58 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first py-3">
+      <img src="../../assets/img/thepeople.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form
+      [formGroup]="sForm"
+      (ngSubmit)="saveData()"
+      class="needs-validation "
+      novalidate
+    >
+      <div>
+        <input
+          type="text"
+          class="fadeIn second form-control"
+          id="validationCustom01"
+          placeholder="Nombre de usuario"
+          formControlName="userName"
+          [ngClass]="{ 'is-invalid': isSend && f.userName.errors }"
+        />
+        <div class="invalid-feedback ">Introduce un nombre válido</div>
+      </div>
+      <div>
+        <input
+          type="email"
+          class="fadeIn second form-control"
+          id="validationCustom02"
+          placeholder="Correo electrónico"
+          formControlName="email"
+          [ngClass]="{ 'is-invalid': isSend && f.email.errors }"
+        />
+        <div class="invalid-feedback">Introduce un email válido</div>
+      </div>
+      <div>
+        <input
+          type="password"
+          class="fadeIn third form-control"
+          id="validationCustom03"
+          placeholder="Contraseña"
+          formControlName="password"
+          [ngClass]="{ 'is-invalid': isSend && f.password.errors }"
+        />
+        <div class="invalid-feedback">Introduce una contraseña válida</div>
+      </div>
+      <button type="submit" class="fadeIn fourth mt-4">Registrarse</button>
+    </form>
+    <br />
+    <p class="fadeIn fourth">
+      ¿Ya tienes cuenta?
+      <a class="fadeIn fourth account" routerLink="/login">Inicia sesión</a>
+    </p>
+  </div>
+</div>
