@@ -23,7 +23,7 @@ export class UsersService {
       );
   }
 
-  singup(register: User) {
+  singup(register: User): Observable<any> {
     return this.httpClient.post(`${environment.apiUrl}/signup`, register)
       .pipe(
         catchError((error: any) => {
@@ -32,8 +32,17 @@ export class UsersService {
       );
   }
 
-  apply(job: Job) {
+  apply(job: Job): Observable<any> {
     return this.httpClient.post(`${environment.apiUrl}/user/jobs`, job)
+      .pipe(
+        catchError((error: any) => {
+          return throwError(error);
+        })
+      );
+  }
+
+  userDetail(): Observable<any> {
+    return this.httpClient.get(`${environment.apiUrl}/user`)
       .pipe(
         catchError((error: any) => {
           return throwError(error);

@@ -1,6 +1,7 @@
 import { AuthService } from './../services/auth/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-navbar',
@@ -9,18 +10,19 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  isCompany: Boolean = true
-  isEmpleado: Boolean = true
+  isCompany: Boolean = false
+  isLogin: Boolean = false
   bgBlue = false
+  currentUser = new User()
 
   constructor(private router: Router, public auth: AuthService) { }
 
   ngOnInit() {
     this.router.events.subscribe(route => {
       if (route instanceof NavigationEnd) {
-        if (route.url.includes("detail") ) {
+        if (route.url.includes("detail") || route.url.includes("panel")) {
           this.bgBlue = true
-        }else{
+        } else {
           this.bgBlue = false
         }
       }
@@ -28,12 +30,16 @@ export class NavbarComponent implements OnInit {
     })
 
     if (this.auth.isAuthenticated()) {
-        const user = localStorage.getItem("token")
-        /* if (user.role == "company") {
+      this.isLogin = true
+      const user = localStorage.getItem('user')
+      console.log(user)
+      this.currentUser = user !== null ? JSON.parse(user) : new User()
 
-        } else {
-
-        } */
+      if (this.currentUser.role == "company") {
+        this.isCompany = true
+      } else {
+        this.isCompany = false
+      }
     }
   }
 
@@ -43,11 +49,11 @@ export class NavbarComponent implements OnInit {
 
   login() {
 
-      this.router.navigate(['/login'])
+    this.router.navigate(['/login'])
 
   }
 
-  newOfert(){
+  newOfert() {
     this.router.navigate(['/new'])
   }
 }

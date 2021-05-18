@@ -29,7 +29,8 @@ export class LoginComponent implements OnInit {
         '',
         [
           Validators.required,
-          Validators.pattern('^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$'),
+          Validators.minLength(8)
+          /* Validators.pattern('^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$') */,
         ],
       ],
     });
@@ -57,24 +58,32 @@ export class LoginComponent implements OnInit {
 
     //Hacer llamada al servicio
     //Dos servicios user y people
-      const user: User = new User();
-      user.email = this.f.email.value;
-      user.password =  this.f.password.value;
-      this.userService.login(user).subscribe(
-        (data: any) => {
-          localStorage.setItem("token", data.access_token)
-          this.router.navigate(['/panel']);
-          console.log(data);
-        },
-        (error) => {
-          console.log('Error:', error);
-        }
-      );
-    }
-
-
-
-
-
+    const user: User = new User();
+    user.email = this.f.email.value;
+    user.password = this.f.password.value;
+    this.userService.login(user).subscribe(
+      (data: any) => {
+        localStorage.setItem("token", data.access_token)
+        this.userService.userDetail().subscribe(
+          data => {
+            localStorage.setItem("user", JSON.stringify(data.data))
+            this.router.navigate(['/panel']);
+            console.log(data);
+          },
+          (error) => {
+            console.log('Error:', error);
+          }
+        )
+      },
+      (error) => {
+        console.log('Error:', error);
+      }
+    );
   }
+
+
+
+
+
+}
 
